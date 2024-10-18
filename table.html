@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Jawad's Weather</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="table.html">Tables</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <div class="top-bar">
+                <input type="text" id="cityInput" class="search-bar" placeholder="Enter city name...">
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+            
+            <div class="filter-buttons">
+                <button id="filterAscending">Sort Ascending</button>
+                <button id="filterRainy">Show Rainy Days</button>
+                <button id="filterHighest">Highest Temperature</button>
+                <button id="filterDescending">Sort Descending</button>
+            </div>
+            
+            <div class="table-container" id="tableContainer">
+                <h2>5-Day Weather Forecast</h2>
+                <h2 id="cityName" style="margin: 0;"></h2> 
+                <div class="loader" id="loader" style="display: none;"></div> 
+                <table class="table" id="forecastTable">
+                    <tr>
+                        <th>Date</th>
+                        <th>Temperature (°C)</th>
+                        <th>Weather</th>
+                    </tr>
+                </table>
+                <div class="pagination" id="pagination">
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="chatbot-container">
+            <h3>Chat with Gemini AI</h3>
+            <textarea id="apiPrompt" placeholder="Ask anything..."></textarea>
+            <button id="chatbotBtn">Send</button>
+            <pre id="response" class="response-box"></pre>
+        </div>
+    </div>
+    <script src="chatbot.js"></script>
+    <script src="table.js"></script>
+</body>
+</html>

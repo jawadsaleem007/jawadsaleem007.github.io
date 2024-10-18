@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawad's Weather</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Jawad's Weather</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="table.html">Tables</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div class="top-bar">
+                <input type="text" id="cityInput" class="search-bar" placeholder="Enter city name" />
+                <button id="getWeatherBtn">Search</button>
+                <div class="user-profile"></div>
+            </div>
+
+            <div class="unit-selector" style="text-align: center; margin-bottom: 10px;">
+                <label for="tempUnit">Select Temperature Unit:</label>
+                <select id="tempUnit">
+                    <option value="C">°C</option>
+                    <option value="F">°F</option>
+                </select>
+            </div>
+
+            <div class="weather-data" id="weatherData" style="text-align: center;">
+                <h2>Weather:</h2>
+                    <img id="weatherIcon" src="" alt="Weather Icon" style="width: 100px; height: auto;">   
+                <p id="weatherDetails"></p>
+            </div>
+
+            <div class="charts">
+                <div class="chart">
+                    <canvas id="verticalBarChart"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
